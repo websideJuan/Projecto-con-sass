@@ -1,0 +1,56 @@
+$font-stack: Helvetica, sans-serif;
+$primary-color: #fff;
+$primary-bg-color: #333;
+
+*,*::before,*::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.showMenu{
+    height: 171px;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    background: $primary-bg-color;
+    position: relative;
+    a{
+        color: $primary-color;
+    }
+
+    button{
+        background-color: transparent;
+        border: none;
+    }
+    ul{
+        transition: height 1s ease-in-out;
+        height: 1px;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: $primary-bg-color;
+        display: flex;
+        flex-direction: column;
+        li{
+            display: inline-block;
+            list-style: none;
+            a{
+                display: block;
+                text-align: center;
+                text-decoration: none;
+                padding: 12px 20px;
+                color: $primary-color;
+            }
+        }
+    }
+}
+a:hover{
+    background: #0000008c;
+    color: #ffffff8c;
+}
